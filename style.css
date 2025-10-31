@@ -1,0 +1,27 @@
+/* Make the whole page black and center the video */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Make video scale perfectly on any device */
+.video {
+  width: 100vw;         /* fill full screen width */
+  height: 100vh;        /* fill full screen height */
+  object-fit: contain;  /* keeps full video visible, no crop */
+  background-color: black;
+  border: none;
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 600px) {
+  .video {
+    object-fit: cover;  /* zooms slightly for mobile look */
+  }
+}
